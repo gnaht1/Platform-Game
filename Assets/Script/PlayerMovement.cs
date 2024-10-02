@@ -17,12 +17,16 @@ public class PlayerControllerSimple : MonoBehaviour
     private float horizontalInput;
 
 
+    //public float moveSpeed = 10f;   // Tốc độ di chuyển
+    //public float jumpForce = 1f;  // Lực nhảy
+
+
+
     void Awake()
     {
         // Lấy thành phần...
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        anim = GetComponent<Animator>();
     }
 
     void Update()
