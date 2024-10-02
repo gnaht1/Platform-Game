@@ -507,7 +507,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24729347, y: -1.4672294}
+  m_Offset: {x: -0.24729347, y: -1.4545543}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -518,7 +518,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.8861694, y: 0.68160105}
+  m_Size: {x: 7.8861694, y: 0.706951}
   m_EdgeRadius: 0
 --- !u!4 &236687657
 Transform:
@@ -578,6 +578,7 @@ Transform:
   - {fileID: 435625580}
   - {fileID: 469104395}
   - {fileID: 1497814944}
+  - {fileID: 1535099325}
   m_Father: {fileID: 1520551991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412239633
@@ -2194,8 +2195,9 @@ GameObject:
   - component: {fileID: 1373366973}
   - component: {fileID: 1373366975}
   - component: {fileID: 1373366976}
+  - component: {fileID: 1373366977}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Mask Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2347,7 +2349,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01274921, y: -0.01665765}
+  m_Offset: {x: 0.011646945, y: -0.028833777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2358,8 +2360,29 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24350488, y: 0.32327944}
+  m_Size: {x: 0.22646543, y: 0.25152612}
   m_EdgeRadius: 0
+--- !u!95 &1373366977
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373366970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c31748a61aaaaf345862ef152c1d168c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1435196301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,7 +2871,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 304734968}
-  - {fileID: 1535099325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535099323
@@ -2933,7 +2955,7 @@ Transform:
   m_LocalScale: {x: 1.728, y: 1.728, z: 1.728}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1520551991}
+  m_Father: {fileID: 304734968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573787470
 GameObject:

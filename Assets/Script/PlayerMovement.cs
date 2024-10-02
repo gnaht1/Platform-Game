@@ -8,25 +8,22 @@ public class PlayerControllerSimple : MonoBehaviour
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer; // Boxcast
     [SerializeField] private LayerMask wallLayer;
+    // Thành phần Animator
     private Animator anim;
     // Thành phần Rigidbody2D
     private Rigidbody2D body;
+    // Thành phần Boxcollider2D
     private BoxCollider2D boxCollider;
     //Create delay for each wall jump
     private float wallJumpCooldown;
     private float horizontalInput;
 
 
-    //public float moveSpeed = 10f;   // Tốc độ di chuyển
-    //public float jumpForce = 1f;  // Lực nhảy
-
-
-
     void Awake()
     {
-        // Lấy thành phần...
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -65,7 +62,7 @@ public class PlayerControllerSimple : MonoBehaviour
                 body.gravityScale = 3;
             }
 
-            if (Input.GetKey(KeyCode.Space)) // allow player to jump only if grounded
+            if (Input.GetKey(KeyCode.Space) && isGrounded()) // allow player to jump only if grounded
             {
                 Jump();
             }
@@ -74,11 +71,13 @@ public class PlayerControllerSimple : MonoBehaviour
         {
             wallJumpCooldown += Time.deltaTime;
         }
+
+        anim.SetBool("run", horizontalInput != 0);
+        anim.SetBool("grounded", isGrounded());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
     }
     private void Jump()
     {
