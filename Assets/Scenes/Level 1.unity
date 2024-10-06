@@ -2114,6 +2114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  player: {fileID: 1373366971}
+  aheadDistance: 2
+  cameraSpeed: 2
 --- !u!1 &522042015
 GameObject:
   m_ObjectHideFlags: 0
