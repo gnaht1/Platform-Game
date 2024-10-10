@@ -35,9 +35,13 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
-                anim.SetTrigger("die");
                 GetComponent<PlayerMovement>().enabled = false;
-                dead = true;
+
+                anim.SetBool("grounded", true);
+                anim.SetTrigger("die");
+
+                dead = true; 
+                
             }
             
         }

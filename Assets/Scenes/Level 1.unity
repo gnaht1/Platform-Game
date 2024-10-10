@@ -5218,14 +5218,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d9f0eada5179d4893a69c11e666376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  jumpPower: 7
+  speed: 3
+  jumpPower: 9
+  coyoteTime: 0.1
+  extraJumps: 1
+  wallJumpX: 1500
+  wallJumpY: 700
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
+  jumpSound: {fileID: 0}
 --- !u!114 &1373366979
 MonoBehaviour:
   m_ObjectHideFlags: 0
