@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     private float lookAhead;
 
     // Added: Smoothing follow camera
-    [SerializeField] private float followSmoothTime = 0.1f;
+    [SerializeField] private float followSmoothTime = 0.2f;
     private Vector3 cameraVelocity = Vector3.zero;
 
     private void Update()
@@ -25,8 +25,8 @@ public class CameraController : MonoBehaviour
         //     new Vector3(currentPosX, transform.position.y, transform.position.z),
         //     ref velocity, speed);
 
-        // Follow player camera with smoothing to reduce sudden movements
-        Vector3 targetPosition = new Vector3(player.position.x + lookAhead, transform.position.y, transform.position.z);
+        // Follow player camera with smoothing to reduce sudden movements on both X and Y axes
+        Vector3 targetPosition = new Vector3(player.position.x + lookAhead, player.position.y, transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref cameraVelocity, followSmoothTime);
 
         // Gradually adjust look ahead distance
