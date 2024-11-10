@@ -14,6 +14,11 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes; // Number of times the player flashes red
     private SpriteRenderer spriteRenderer;
 
+    [Header("Death Sound")]
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip hurtSound;
+
+
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -30,6 +35,8 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("hurt");
             StartCoroutine(Invulerability());
+
+            SoundManager.instance.PlaySound(hurtSound);
         }
         else
         {
@@ -41,7 +48,9 @@ public class Health : MonoBehaviour
                 anim.SetTrigger("die");
 
                 dead = true; 
-                
+
+                SoundManager.instance.PlaySound(deathSound);
+
             }
             
         }
