@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
 
+    public FoodManager cm;
+
     private void Awake()
     {
         //Grab references for rigidbody and animator from object
@@ -133,5 +135,15 @@ public class PlayerMovement : MonoBehaviour
     public bool canAttack()
     {
         return horizontalInput == 0 && isGrounded() && !onWall();
+    }
+
+    // Food pickup
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            Destroy(other.gameObject);
+            cm.foodCount++;
+        }
     }
 }
