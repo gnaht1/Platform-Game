@@ -57,3 +57,6 @@ TagManager:
   - name: Ground
     uniqueID: 561752185
     locked: 0
+  - name: Trap
+    uniqueID: 3177399395
+    locked: 0
