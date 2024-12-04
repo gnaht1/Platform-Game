@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class HealthCollectible : MonoBehaviour
 {
     [SerializeField] private float healthValue;
     [SerializeField] private AudioClip pickupSound;
