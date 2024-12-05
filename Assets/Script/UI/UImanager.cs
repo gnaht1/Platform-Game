@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverScreen;
-    [SerializeField] private AudioClip gameOverSound;
 
     private void Awake()
     {
@@ -14,7 +13,7 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
-        SoundManager.instance.PlaySound(gameOverSound);
+        
 
     }
     public void Restart()

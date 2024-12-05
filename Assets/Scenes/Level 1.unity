@@ -5931,13 +5931,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e5e45c2c6853a540909b4967dacd3b3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.198
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8040,7 +8040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.48999, y: -0.000061035156}
+  m_AnchoredPosition: {x: -7.489746, y: 0}
   m_SizeDelta: {x: 14.979, y: -0.000061035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &633986441
@@ -9493,8 +9493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000032425, y: 278}
-  m_SizeDelta: {x: 745.384, y: 399.83}
+  m_AnchoredPosition: {x: -0.000014782, y: 269}
+  m_SizeDelta: {x: 1245.2041, y: 377.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864220892
 MonoBehaviour:
@@ -9559,7 +9559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOU DIED
+  m_Text: GAME FINISHED
 --- !u!222 &864220895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12694,7 +12694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.25, y: -249.65}
+  m_AnchoredPosition: {x: -3.25, y: -313}
   m_SizeDelta: {x: 504.867, y: 126.811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925830009
@@ -15213,7 +15213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -99}
+  m_AnchoredPosition: {x: -3.25, y: -143}
   m_SizeDelta: {x: 511.367, y: 174.481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1251707087
@@ -15489,7 +15489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 447531298}
-  gameOverSound: {fileID: 8300000, guid: 83c1d60808bc67349a18b5dafe5b875a, type: 3}
 --- !u!4 &1270823851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6036836059718516170, guid: 1b2db03001d9f184e8ad44eca5155081, type: 3}
@@ -15529,7 +15528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -70.13, y: -50}
+  m_AnchoredPosition: {x: -70.12988, y: -50}
   m_SizeDelta: {x: 140.26, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280430049
@@ -16266,7 +16265,7 @@ Transform:
   m_GameObject: {fileID: 1373366970}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00493926, y: 0.00005233672, z: -0.0000002585078, w: 0.99998784}
-  m_LocalPosition: {x: -28.32, y: 0.53, z: -0}
+  m_LocalPosition: {x: -28.3, y: -0.19, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16473,7 +16472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ae896c0ee29a843a3f9cd55cded95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {fileID: 0}
+  gameOverSound: {fileID: 8300000, guid: 83c1d60808bc67349a18b5dafe5b875a, type: 3}
+  gameWinnerSound: {fileID: 8300000, guid: 9edc875eaacdff444a6e7e5bf7f5de0a, type: 3}
 --- !u!4 &1379815086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2295576992419991252, guid: d8dd0748d0e9af24f8b7584498baed4b, type: 3}
@@ -18066,7 +18066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.2503, y: 51.249}
+  m_AnchoredPosition: {x: -0.0000052452, y: 21.73}
   m_SizeDelta: {x: 504.87, y: 154.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607644266
@@ -28133,7 +28133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 50}
+  m_AnchoredPosition: {x: -372, y: 30.04}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042195059
